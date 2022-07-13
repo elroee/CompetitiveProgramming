@@ -27,7 +27,7 @@ class Result
     {
         int testnum = arr[n-1];
         bool found = false;
-        for(int i=n-2; i>=0 && !false; i--){
+        for(int i=n-2; i>=0 && !found; i--){
             if(testnum<arr[i])
                  arr[i+1]=arr[i];
             else
@@ -41,6 +41,15 @@ class Result
             }
             Console.WriteLine();
             
+        }
+        if(!found)
+        {
+            arr[0]=testnum;
+            foreach(int a in arr)
+            {
+                Console.Write(a+" ");
+            }
+            Console.WriteLine();
         }
         
 
